@@ -95,7 +95,7 @@ body, html {
     </div>
 
     <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-      <h5><a href="./hist_div.html">Binance: BTCUSD</a></h5>
+      <h5><a href="./hist_div.html" target="_blank">Binance: BTCUSD</a></h5>
       <p class="w3-text-grey">Bitcoin-USD pair from Binance cryptocurrency exchange.</p><br>
     </div>
     <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
@@ -111,10 +111,11 @@ body, html {
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT FOR INFORMATION</span></h5>
     <p><strong>Request</strong> an asset.</p>
     <p><strong>Business</strong> inquiries.</p>
-    <form action="/action_page.php" target="_blank">
+    <form action="https://formspree.io/f/xgeqvbgl" " method="post">
+      <input type="hidden" name="_subject" value="Form submission from bajayaja.github.io." />
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Asset Request" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Contact Email" required name="date"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Asset Request" required name="Asset Request"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Contact Email" required name="Reply To"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Inqueries" required name="Message"></p>
       <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
     </form>
