@@ -7,6 +7,11 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
+
+#more {display: none;}
+
+#evenmore {display: none;}
+
 body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
@@ -69,10 +74,13 @@ body, html {
 
         MAPS is derived from datapoints that a separate tool (the Moving Average Cluster Analysis (MACA) Market Tool) calculates from candlestick price data.<br><br> 
         
-        MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny. <br><br> 
+        MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny.<span id="dots">..</span><br><br>
         
-        According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.</p>
+        <span id="more">
+
+        According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.</span></p>
     <div class="w3-panel w3-leftbar w3-light-grey">
+      <span id="evenmore">
       <p><i>Implementations:</i></p>
       <p style="margin-left: 40px;">Carry out normal technical analysis (TA).<br><br>
         
@@ -94,11 +102,12 @@ body, html {
 
         Real-time refresh. 
         
-        Machine-learning implementations:
+        Machine-learning implementations:</p>
         <p style="margin-left: 80px;">MACA-2: SMA proximity data.</p>
-        <p style="margin-left: 80px;">MACA weighted processing.</p>
+        <p style="margin-left: 80px;">MACA weighted processing.</p></span>
        
     </div>
+    <p><span onclick="myFunction()" id="myBtn" style="cursor: pointer; font-size: 16px;text-decoration: underline;">Read more.</span></p>
    </div>
 </div>
 <div class="w3-container" id="demo">
@@ -177,7 +186,31 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
 document.getElementById("myLink").click();
+
+
+// <!-- Read more/less button -->
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var evenMore = document.getElementById("evenmore");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more...";
+    moreText.style.display = "none";
+    evenMore.style.display = "none";
+  } 
+  else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less.";
+    moreText.style.display = "inline";
+    evenMore.style.display = "inline";
+  }
+}
 </script>
 
 </body>
 </html>
+
+<!-- social media buttons https://freefrontend.com/css-buttons/ && https://codepen.io/abdelrhmansaid/pen/OJRNOpQ-->
