@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
 
-#more {display: none;}
+#read-more {display: none;}
 
-#evenmore {display: none;}
+#greyText {display: none;}
 
 body, html {
   height: 100%;
@@ -26,6 +26,10 @@ body, html {
 
 .menu {
   display: none;
+}
+
+.highlight {
+  background-color: yellow;
 }
 </style>
 </head>
@@ -80,13 +84,13 @@ body, html {
 
         MAPS is derived from datapoints that a separate tool (the Moving Average Cluster Analysis (MACA) Market Tool) calculates from candlestick price data.<br><br> 
         
-        MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny.<span id="dots">..</span><br><br>
+        MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny.<span id="ellipsis">..</span><br><br>
         
-        <span id="more">
+        <span id="read-more">
 
         According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.</span></p>
     <div class="w3-panel w3-leftbar w3-light-grey">
-      <span id="evenmore">
+      <span id="greyText">
       <p><i>Implementations:</i></p>
       <p style="margin-left: 40px;">Carry out normal technical analysis (TA).<br><br>
         
@@ -118,7 +122,7 @@ body, html {
 </div>
 <div class="w3-container" id="bew!">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">TITLE</span></h5>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">BEW!</span></h5>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium minima nesciunt! Vel illo quisquam voluptatum, quaerat nesciunt neque eius doloremque commodi voluptas porro dolore veniam eum. Nobis, accusantium molestias!<br><br> 
 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit enim dolor, asperiores eveniet esse optio aspernatur eaque numquam quod natus omnis fuga nemo tempora deleniti debitis aut expedita blanditiis!<br><br> 
@@ -130,7 +134,7 @@ body, html {
 </div>
 <div class="w3-container" id="bew@">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">TITLE</span></h5>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">BEW@</span></h5>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium minima nesciunt! Vel illo quisquam voluptatum, quaerat nesciunt neque eius doloremque commodi voluptas porro dolore veniam eum. Nobis, accusantium molestias!<br><br> 
 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit enim dolor, asperiores eveniet esse optio aspernatur eaque numquam quod natus omnis fuga nemo tempora deleniti debitis aut expedita blanditiis!<br><br> 
@@ -190,7 +194,7 @@ body, html {
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Asset Request" required name="Asset Request"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Contact Email" required name="Reply To"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Inqueries" required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+      <p><button class="w3-button w3-black" type="submit" id="submit-btn">SEND MESSAGE</button></p>
     </form>
   </div>
 </div>
@@ -222,22 +226,28 @@ body, html {
   
   // <!-- Read more/less button -->
   $("#myBtn").click(function() {
-  var dots = $("#dots");
-  var moreText = $("#more");
-  var evenMore = $("#evenmore");
+  var ellipsis = $("#ellipsis");
+  var moreText = $("#read-more");
+  var greyText = $("#greyText");
   var btnText = $("#myBtn");
 
-  if (dots.is(":hidden")) {
-    dots.show();
+  if (ellipsis.is(":hidden")) {
+    ellipsis.show();
     btnText.html("Read more...");
     moreText.hide();
-    evenMore.hide();
+    greyText.hide();
   } else {
-    dots.hide();
+    ellipsis.hide();
     btnText.html("Read less.");
     moreText.show();
-    evenMore.show();
+    greyText.show();
   }
+});
+
+$(document).ready(function() {
+  $('#submit-btn').click(function() {
+    $('input').addClass('highlight');
+  });
 });
   </script>
   
