@@ -252,22 +252,24 @@ body, html {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
   
-  // Tabbed Menu
+// Tabbed Menu
+$(document).ready(function() {
+$("#myLink").click();
+  });
+
   function openMenu(evt, menuName) {
-    var i, x, tablinks;
-    x = document.getElementsByClassName("menu");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-    }
-    document.getElementById(menuName).style.display = "block";
-    evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+  var i, x, tablinks;
+  x = $(".menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-  document.getElementById("myLink").click();
-  
+  tablinks = $(".tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  $("#" + menuName).css("display", "block");
+  $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
+}
   
   // <!-- Read more/less button -->
   $("#myBtn").click(function() {
