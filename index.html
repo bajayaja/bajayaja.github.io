@@ -199,48 +199,48 @@ body, html {
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-
-
-// <!-- Read more/less button -->
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var evenMore = document.getElementById("evenmore");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more...";
-    moreText.style.display = "none";
-    evenMore.style.display = "none";
-  } 
-  else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less.";
-    moreText.style.display = "inline";
-    evenMore.style.display = "inline";
-  }
-}
-</script>
-
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+  
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+  }
+  document.getElementById("myLink").click();
+  
+  
+  // <!-- Read more/less button -->
+  $("#myBtn").click(function() {
+  var dots = $("#dots");
+  var moreText = $("#more");
+  var evenMore = $("#evenmore");
+  var btnText = $("#myBtn");
+
+  if (dots.is(":hidden")) {
+    dots.show();
+    btnText.html("Read more...");
+    moreText.hide();
+    evenMore.hide();
+  } else {
+    dots.hide();
+    btnText.html("Read less.");
+    moreText.show();
+    evenMore.show();
+  }
+});
+  </script>
+  
 </html>
 
 <!-- social media buttons https://freefrontend.com/css-buttons/ && https://codepen.io/abdelrhmansaid/pen/OJRNOpQ-->
