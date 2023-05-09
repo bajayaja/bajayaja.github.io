@@ -22,18 +22,18 @@ function openMenu(evt, menuName) {
 
 $(document).ready(function() {
     $("#myBtn").click(function() {
-        var ellipsis = $("#ellipsis");
+        var dots = $("#dots");
         var moreText = $("#more");
         var evenmore = $("evenmore");
         var btnText = $("#myBtn");
 
-        if (ellipsis.is(":hidden")) {
-            ellipsis.show();
+        if (dots.is(":hidden")) {
+            dots.show();
             btnText.html("Read more...");
             moreText.hide();
             evenmore.hide();
         } else {
-            ellipsis.hide();
+            dots.hide();
             btnText.html("Read less.");
             moreText.show();
             evenmore.show();

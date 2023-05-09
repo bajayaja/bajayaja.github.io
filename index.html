@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="style.css"> 
-    <script src="code.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="code.js"></script>
   </head>
   <body>
 
@@ -65,8 +65,7 @@
 
             MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny.<span id="dots">..</span><br><br>
 
-            <span id="more">
-
+          <span id="more">
             According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.
           </span></p>
 
@@ -99,7 +98,7 @@
             <p style="margin-left: 80px;">MACA weighted processing.</p></span>
           </div>
 
-        <p><span onclick="myFunction()" id="myBtn" style="cursor: pointer; font-size: 16px;text-decoration: underline;">Read more.</span></p>
+        <p><span onclick="myFunction()" id="myBtn" style="cursor: pointer; font-size: 16px;text-decoration: underline;">Read more...</span></p>
       </div>
     </div>
 
