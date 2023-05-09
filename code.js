@@ -69,7 +69,7 @@ $(document).ready(function() {
         openMenu(event, "eat");
     });
     $("#drink").click(function() {
-        openMenu(event, "eat");
+        openMenu(event, "drink");
     });
 });
 
