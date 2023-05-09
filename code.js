@@ -60,11 +60,12 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    openMenu(event, "Eat"); // add this line
     $("#myLink").click(function() {
         openMenu(event, "menuName");
     });
 });
+
+
 
 function openMenu(evt, menuName) {
     var i, x, tablinks;
@@ -79,6 +80,8 @@ function openMenu(evt, menuName) {
     $("#" + menuName).css("display", "block");
     $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
   }
+
+  $("#myLink").trigger("click");
 
   $(document).ready(function() {
     $('input').click(function() {
