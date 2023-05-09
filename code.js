@@ -23,7 +23,7 @@ function openMenu(evt, menuName) {
 $(document).ready(function() {
     $("#myBtn").click(function() {
         var ellipsis = $("#ellipsis");
-        var moreText = $("#read-more");
+        var moreText = $("#readMore");
         var greyText = $("#greyText");
         var btnText = $("#myBtn");
 
