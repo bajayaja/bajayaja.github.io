@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#myLink").click(function() {
-      openMenu(event, "menuName");
+      openMenu(event, "Eat");
     });
   
     function openMenu(evt, menuName) {
