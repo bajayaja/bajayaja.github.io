@@ -60,12 +60,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    openMenu(event, "Eat"); // add this line
     $("#myLink").click(function() {
-        openMenu(event, "Eat");
+        openMenu(event, "menuName");
     });
 });
-
-
 
 function openMenu(evt, menuName) {
     var i, x, tablinks;
