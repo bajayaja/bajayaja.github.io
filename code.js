@@ -68,6 +68,9 @@ $(document).ready(function() {
     $("#myLink").click(function() {
         openMenu(event, "eat");
     });
+    $("#myLink").click(function() {
+        openMenu(event, "eat");
+    });
 });
 
 
