@@ -58,8 +58,6 @@ $(document).ready(function() {
     });
 });
 
-{/* <script>
-
 $(document).ready(function() {
       $('input').click(function() {
         $(this).addClass('highlight');
@@ -68,7 +66,7 @@ $(document).ready(function() {
         $(this).removeClass('highlight');
       });
 });
-</script> */}
+
 
 // $(document).ready(function() {
 //     $("#eat").click(function() {
