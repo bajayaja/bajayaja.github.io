@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $("#myLink").click();
-});
 
 function openMenu(evt, menuName) {
     var i, x, tablinks;
@@ -36,11 +35,9 @@ $("#myBtn").click(function() {
 });
 
 // Highlight contact field function
-$(document).ready(function() {
     $('#submit-btn').click(function() {
         $('input').addClass('highlight');
     });
-});
 
 $(function() {
     $.ajax({
@@ -82,4 +79,5 @@ $(function() {
             console.log('Error: ' + errorThrown);
         }
     });
+});
 });
