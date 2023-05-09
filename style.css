@@ -17,6 +17,6 @@ body, html {
 }
 
 .highlight {
-  border-color: blueviolet;
+  background-color: blueviolet;
   color: white;
 }
