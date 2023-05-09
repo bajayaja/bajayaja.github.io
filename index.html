@@ -144,7 +144,7 @@
       </div>
     </div>
 
-  Contact/Area Container
+    <!-- // Contact/Area Container -->
     <div class="w3-container" id="contact" style="padding-bottom:32px;">
       <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT</span></h5>
@@ -199,6 +199,34 @@
     });
   });
 </script>
+
+<div class="w3-container" id="contact" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT</span></h5>
+    <p><strong>Request</strong> an asset.</p>
+    <p><strong>Business</strong> inquiries.</p>
+    <form action="https://formspree.io/f/xgeqvbgl" method="post">
+      <input type="hidden" name="_subject" value="Form submission from bajayaja.github.io." />
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Asset Request" required name="Asset Request"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Contact Email" required name="Reply To"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Inquiries" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('input').on('focus', function() {
+      $(this).addClass('highlight');
+    });
+    $('input').on('blur', function() {
+      $(this).removeClass('highlight');
+    });
+  });
+</script>
+
 
 
   <!-- Footer -->
