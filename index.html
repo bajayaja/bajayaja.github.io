@@ -189,14 +189,16 @@
   </div>
 </div>
 
-$(document).ready(function() {
-  $('input').click(function() {
-    $(this).addClass('highlight');
+<script>
+  $(document).ready(function() {
+    $('input').click(function() {
+      $(this).addClass('highlight');
+    });
+    $('input').blur(function() {
+      $(this).removeClass('highlight');
+    });
   });
-  $('input').blur(function() {
-    $(this).removeClass('highlight');
-  });
-});
+</script>
 
 
   <!-- Footer -->
