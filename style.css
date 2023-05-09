@@ -17,5 +17,6 @@ body, html {
 }
 
 .highlight {
-  border-color: yellow;
+  border-color: blueviolet;
+  color: white;
 }
