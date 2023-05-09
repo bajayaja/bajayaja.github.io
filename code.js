@@ -23,20 +23,20 @@ function openMenu(evt, menuName) {
 $(document).ready(function() {
     $("#myBtn").click(function() {
         var ellipsis = $("#ellipsis");
-        var moreText = $("#readMore");
-        var greyText = $("#greyText");
+        var moreText = $("#more");
+        var evenmore = $("evenmore");
         var btnText = $("#myBtn");
 
         if (ellipsis.is(":hidden")) {
             ellipsis.show();
             btnText.html("Read more...");
             moreText.hide();
-            greyText.hide();
+            evenmore.hide();
         } else {
             ellipsis.hide();
             btnText.html("Read less.");
             moreText.show();
-            greyText.show();
+            evenmore.show();
         }
     });
 });
