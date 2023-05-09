@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="code.js"></script>
   </head>
+
   <body>
 
   <!-- Links (sit on top) -->
@@ -64,41 +65,39 @@
             MAPS is derived from datapoints that a separate tool (the Moving Average Cluster Analysis (MACA) Market Tool) calculates from candlestick price data.<br><br> 
 
             MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny.<span id="dots">..</span><br><br>
-
-          <span id="more">
-            According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.
-          </span></p>
-
-          <div class="w3-panel w3-leftbar w3-light-grey">
-            <span id="evenmore">
-            <p><i>Implementations:</i></p>
-            <p style="margin-left: 40px;">Carry out normal technical analysis (TA).<br><br>
-
-            All code is written in Python and uses readily accessible market data. The code can process any asset at any time interval. <br><br> 
-
-            MACA-1 data is created and saved in binary (.pickle) using NumericalPython. Data is easily accessible and machine learning algorithms can process the data. <br><br> 
-
-            MAPS and MACA-1 histogram data are saved in a similar binary format. <br><br> 
+          </p>
+          <div id="more">
+            <p>According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.
             </p>
-            <p><i>Limitations:</i></p>
-            <p style="margin-left: 40px;">Currently the processing and graphing functions lack any real-time refresh functions. Data is processed in bulk and update functions must reprocess the entire last set of bulk data. <br><br> 
+            <div class="w3-panel w3-leftbar w3-light-grey" id="evenmore">
+              <p><i>Implementations:</i></p>
+              <p style="margin-left: 40px;">Carry out normal technical analysis (TA).<br><br>
 
-            There has been no outside review for accuracy. Minor increments of error might still exist evenly throughout the histograms. <br><br> 
+              All code is written in Python and uses readily accessible market data. The code can process any asset at any time interval. <br><br> 
 
-            Tools currently use SciPy and Plotly’s Python library for histograms and visuals. Other tools may be better suited for accuracy and real-time refresh. <br><br> </p>
-            <p><i>Plans and intentions:</i></p>
-            <p style="margin-left: 40px;">MAPS Acceleration Curve (coming soon). <br><br>
+              MACA-1 data is created and saved in binary (.pickle) using NumericalPython. Data is easily accessible and machine learning algorithms can process the data. <br><br> 
 
-            Outside review of code and data for efficiency and accuracy. <br><br> 
+              MAPS and MACA-1 histogram data are saved in a similar binary format. <br><br> 
+              </p>
+              <p><i>Limitations:</i></p>
+              <p style="margin-left: 40px;">Currently the processing and graphing functions lack any real-time refresh functions. Data is processed in bulk and update functions must reprocess the entire last set of bulk data. <br><br> 
 
-            Real-time refresh.<br><br>
+              There has been no outside review for accuracy. Minor increments of error might still exist evenly throughout the histograms. <br><br> 
 
-            Machine-learning implementations:</p>
-            <p style="margin-left: 80px;">MACA-2: SMA proximity data.</p>
-            <p style="margin-left: 80px;">MACA weighted processing.</p></span>
+              Tools currently use SciPy and Plotly’s Python library for histograms and visuals. Other tools may be better suited for accuracy and real-time refresh. <br><br> </p>
+              <p><i>Plans and intentions:</i></p>
+              <p style="margin-left: 40px;">MAPS Acceleration Curve (coming soon). <br><br>
+
+              Outside review of code and data for efficiency and accuracy. <br><br> 
+
+              Real-time refresh.<br><br>
+
+              Machine-learning implementations:</p>
+              <p style="margin-left: 80px;">MACA-2: SMA proximity data.</p>
+              <p style="margin-left: 80px;">MACA weighted processing.</p></span>
           </div>
-
-        <p><span onclick="myFunction()" id="myBtn" style="cursor: pointer; font-size: 16px;text-decoration: underline;">Read more...</span></p>
+          <p><span onclick="myFunction()" id="myBtn" style="cursor: pointer; font-size: 16px;text-decoration: underline;">Read more...</span></p>
+        </div>
       </div>
     </div>
 
