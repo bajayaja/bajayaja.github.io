@@ -24,19 +24,16 @@ $(document).ready(function() {
     $("#myBtn").click(function() {
         var dots = $("#dots");
         var moreText = $("#more");
-        var evenmore = $("evenmore");
         var btnText = $("#myBtn");
 
         if (dots.is(":hidden")) {
             dots.show();
             btnText.html("Read more...");
             moreText.hide();
-            evenmore.hide();
         } else {
             dots.hide();
             btnText.html("Read less.");
             moreText.show();
-            evenmore.show();
         }
     });
 });
