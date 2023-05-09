@@ -1,4 +1,22 @@
 $(document).ready(function() {
+    $("#myBtn").click(function() {
+        var dots = $("#dots");
+        var moreText = $("#more");
+        var btnText = $("#myBtn");
+
+        if (dots.is(":hidden")) {
+            dots.show();
+            btnText.html("Read more...");
+            moreText.hide();
+        } else {
+            dots.hide();
+            btnText.html("Read less.");
+            moreText.show();
+        }
+    });
+});
+
+$(document).ready(function() {
     $("#myLink").click(function() {
         openMenu(event, "menuName");
     });
@@ -20,29 +38,7 @@ function openMenu(evt, menuName) {
     });
 }
 
-$(document).ready(function() {
-    $("#myBtn").click(function() {
-        var dots = $("#dots");
-        var moreText = $("#more");
-        var btnText = $("#myBtn");
 
-        if (dots.is(":hidden")) {
-            dots.show();
-            btnText.html("Read more...");
-            moreText.hide();
-        } else {
-            dots.hide();
-            btnText.html("Read less.");
-            moreText.show();
-        }
-    });
-});
-
-$(document).ready(function() {
-    $('#submit-btn').click(function() {
-        $('input').addClass('highlight');
-    });
-});
 
 $(document).ready(function() {
     $.ajax({
@@ -83,5 +79,11 @@ $(document).ready(function() {
         error: function(xhr, textStatus, errorThrown) {
             console.log('Error: ' + errorThrown);
         }
+    });
+});
+
+$(document).ready(function() {
+    $('#submit-btn').click(function() {
+        $('input').addClass('highlight');
     });
 });
