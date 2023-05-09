@@ -65,10 +65,10 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("#myLink").click(function() {
+    $("#eat").click(function() {
         openMenu(event, "eat");
     });
-    $("#myLink").click(function() {
+    $("#drink").click(function() {
         openMenu(event, "eat");
     });
 });
