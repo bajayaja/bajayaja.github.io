@@ -61,18 +61,11 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#myLink").click(function() {
-        openMenu(event, "menuName");
+        openMenu(event, "Eat");
     });
 });
 
-$(document).ready(function() {
-    $('input').click(function() {
-      $(this).addClass('highlight');
-    });
-    $('input').blur(function() {
-      $(this).removeClass('highlight');
-    });
-  });
+
 
 function openMenu(evt, menuName) {
     var i, x, tablinks;
@@ -87,3 +80,12 @@ function openMenu(evt, menuName) {
     $("#" + menuName).css("display", "block");
     $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
   }
+
+  $(document).ready(function() {
+    $('input').click(function() {
+      $(this).addClass('highlight');
+    });
+    $('input').blur(function() {
+      $(this).removeClass('highlight');
+    });
+  });
