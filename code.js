@@ -1,49 +1,45 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js https://code.jquery.com/jquery-3.6.0.min.js https://cdn.jsdelivr.net/npm/chart.js">
-  
-// Tabbed Menu
 $(document).ready(function() {
-$("#myLink").click();
-  });
+    $("#myLink").click();
+});
 
-  function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = $(".menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = $(".tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  $("#" + menuName).css("display", "block");
-  $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
+function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = $(".menu");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = $(".tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+    }
+    $("#" + menuName).css("display", "block");
+    $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
 }
-  
-  // <!-- Read more/less button -->
-  $("#myBtn").click(function() {
-  var ellipsis = $("#ellipsis");
-  var moreText = $("#read-more");
-  var greyText = $("#greyText");
-  var btnText = $("#myBtn");
 
-  if (ellipsis.is(":hidden")) {
-    ellipsis.show();
-    btnText.html("Read more...");
-    moreText.hide();
-    greyText.hide();
-  } else {
-    ellipsis.hide();
-    btnText.html("Read less.");
-    moreText.show();
-    greyText.show();
-  }
+$("#myBtn").click(function() {
+    var ellipsis = $("#ellipsis");
+    var moreText = $("#read-more");
+    var greyText = $("#greyText");
+    var btnText = $("#myBtn");
+
+    if (ellipsis.is(":hidden")) {
+        ellipsis.show();
+        btnText.html("Read more...");
+        moreText.hide();
+        greyText.hide();
+    } else {
+        ellipsis.hide();
+        btnText.html("Read less.");
+        moreText.show();
+        greyText.show();
+    }
 });
 
 // Highlight contact field function
 $(document).ready(function() {
-  $('#submit-btn').click(function() {
-    $('input').addClass('highlight');
-  });
+    $('#submit-btn').click(function() {
+        $('input').addClass('highlight');
+    });
 });
 
 $(function() {
@@ -85,6 +81,5 @@ $(function() {
         error: function(xhr, textStatus, errorThrown) {
             console.log('Error: ' + errorThrown);
         }
-    })
+    });
 });
-</script>
