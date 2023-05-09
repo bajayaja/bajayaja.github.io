@@ -59,10 +59,13 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('#submit-btn').click(function() {
-        $('input').addClass('highlight');
+    $('input').click(function() {
+      $(this).addClass('highlight');
     });
-});
+    $('input').blur(function() {
+      $(this).removeClass('highlight');
+    });
+  });
 
 $(document).ready(function() {
     $("#eat").click(function() {
