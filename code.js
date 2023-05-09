@@ -65,6 +65,12 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('#submit-btn').click(function() {
+        $('input').addClass('highlight');
+    });
+});
+
 function openMenu(evt, menuName) {
     var i, x, tablinks;
     x = $(".menu");
@@ -78,9 +84,3 @@ function openMenu(evt, menuName) {
     $("#" + menuName).css("display", "block");
     $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
   }
-
-$(document).ready(function() {
-    $('#submit-btn').click(function() {
-        $('input').addClass('highlight');
-    });
-});
