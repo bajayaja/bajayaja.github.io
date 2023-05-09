@@ -1,45 +1,53 @@
 $(document).ready(function() {
-    $("#myLink").click();
-
-function openMenu(evt, menuName) {
-    var i, x, tablinks;
-    x = $(".menu");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    tablinks = $(".tablink");
-    for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-    }
-    $("#" + menuName).css("display", "block");
-    $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
-}
-
-$("#myBtn").click(function() {
-    var ellipsis = $("#ellipsis");
-    var moreText = $("#read-more");
-    var greyText = $("#greyText");
-    var btnText = $("#myBtn");
-
-    if (ellipsis.is(":hidden")) {
-        ellipsis.show();
-        btnText.html("Read more...");
-        moreText.hide();
-        greyText.hide();
-    } else {
-        ellipsis.hide();
-        btnText.html("Read less.");
-        moreText.show();
-        greyText.show();
-    }
+    $("#myLink").click(function() {
+        openMenu(event, "menuName");
+    });
 });
 
-// Highlight contact field function
+function openMenu(evt, menuName) {
+    $(document).ready(function() {
+        var i, x, tablinks;
+        x = $(".menu");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = $(".tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+        }
+        $("#" + menuName).css("display", "block");
+        $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
+    });
+}
+
+$(document).ready(function() {
+    $("#myBtn").click(function() {
+        var ellipsis = $("#ellipsis");
+        var moreText = $("#read-more");
+        var greyText = $("#greyText");
+        var btnText = $("#myBtn");
+
+        if (ellipsis.is(":hidden")) {
+            ellipsis.show();
+            btnText.html("Read more...");
+            moreText.hide();
+            greyText.hide();
+        } else {
+            ellipsis.hide();
+            btnText.html("Read less.");
+            moreText.show();
+            greyText.show();
+        }
+    });
+});
+
+$(document).ready(function() {
     $('#submit-btn').click(function() {
         $('input').addClass('highlight');
     });
+});
 
-$(function() {
+$(document).ready(function() {
     $.ajax({
         url: 'file.json',
         dataType: 'json',
@@ -79,5 +87,4 @@ $(function() {
             console.log('Error: ' + errorThrown);
         }
     });
-});
 });
