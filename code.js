@@ -65,7 +65,7 @@ $(document).ready(function() {
     $('input').blur(function() {
       $(this).removeClass('highlight');
     });
-  });
+});
 
 $(document).ready(function() {
     $("#eat").click(function() {
