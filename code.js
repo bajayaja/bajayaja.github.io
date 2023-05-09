@@ -60,6 +60,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    $("#myLink").trigger("click");
     $("#myLink").click(function() {
         openMenu(event, "menuName");
     });
@@ -80,9 +81,6 @@ function openMenu(evt, menuName) {
     $("#" + menuName).css("display", "block");
     $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
   }
-
-  $("#myLink").trigger("click");
-
   $(document).ready(function() {
     $('input').click(function() {
       $(this).addClass('highlight');
