@@ -1,4 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js https://code.jquery.com/jquery-3.6.0.min.js https://cdn.jsdelivr.net/npm/chart.js">
   
 // Tabbed Menu
 $(document).ready(function() {
