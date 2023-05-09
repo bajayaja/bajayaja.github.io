@@ -60,23 +60,25 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("#myLink").click(function() {
+    $("#eat").click(function() {
       openMenu(event, "Eat");
+    $("#drink").click(function() {
+        openMenu(event, "Drink");
     });
-  
-    function openMenu(evt, menuName) {
-      var i, x, tablinks;
-      x = $(".menu");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      tablinks = $(".tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-      }
-      $("#" + menuName).css("display", "block");
-      $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
-    }
   
     $("#myLink").trigger("click");
   });
+
+//     function openMenu(evt, menuName) {
+//     var i, x, tablinks;
+//     x = $(".menu");
+//     for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//     }
+//     tablinks = $(".tablink");
+//     for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+//     }
+//     $("#" + menuName).css("display", "block");
+//     $(evt.currentTarget.firstElementChild).addClass("w3-dark-grey");
+// }
