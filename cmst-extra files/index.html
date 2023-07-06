@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MAPS Tool</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+
+#more {display: none;}
+
+#evenmore {display: none;}
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./test_rb_wh_clip.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black" style="font-size:17px">
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+        <a href="#demo" class="w3-button w3-block w3-black">DEMO</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">ASSETS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contact" class="w3-button w3-block w3-black">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <!-- <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-tag">Moving Average Points System</span>
+  </div> -->
+  <div class="w3-display-middle w3-center" style="margin-right:50px">
+    <span class="w3-text-white" style="font-size:75px">&nbspMAPS Market<br>&nbspTool</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white "><br>Daily Updates</span>
+    <span class="w3-tag w3-hide-small">Moving Average Points System</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT MAPS MARKET TOOL</span></h5>
+    <p>Welcome to the Moving Average Points System (MAPS) Market Tool. <br><br> 
+
+        MAPS is derived from datapoints that a separate tool (the Moving Average Cluster Analysis (MACA) Market Tool) calculates from candlestick price data.<br><br> 
+        
+        MACA processes candlestick data into a series of datapoints using a user-defined range of Simple Moving Averages (SMAs). Once calculated, MACA uses SMA price data (backdrop) to discover SMA event data (MACA-1). MACA-1 is accurate in milliseconds to 1/1000 of a penny.<span id="dots">..</span><br><br>
+        
+        <span id="more">
+
+        According to a user-specified time interval, MAPS histograms the backdrop and MACA-1 separately to determine their point-values. Percentage differences between the point-values of the two histograms determine the MAPS histogram values. These values oscillate positive when MACA-1 histogram is greater than the backdrop histogram and negative when the opposite. The result is a histogram with unbound percentage data that oscilates positive and negative.</span></p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <span id="evenmore">
+      <p><i>Implementations:</i></p>
+      <p style="margin-left: 40px;">Carry out normal technical analysis (TA).<br><br>
+        
+        All code is written in Python and uses readily accessible market data. The code can process any asset at any time interval. <br><br> 
+
+        MACA-1 data is created and saved in binary (.pickle) using NumericalPython. Data is easily accessible and machine learning algorithms can process the data. <br><br> 
+        
+        MAPS and MACA-1 histogram data are saved in a similar binary format. <br><br> </p>
+       <p><i>Limitations:</i></p>
+       <p style="margin-left: 40px;">Currently the processing and graphing functions lack any real-time refresh functions. Data is processed in bulk and update functions must reprocess the entire last set of bulk data. <br><br> 
+
+        There has been no outside review for accuracy. Minor increments of error might still exist evenly throughout the histograms. <br><br> 
+        
+        Tools currently use SciPy and Plotly’s Python library for histograms and visuals. Other tools may be better suited for accuracy and real-time refresh. <br><br> </p>
+       <p><i>Plans and intentions:</i></p>
+       <p style="margin-left: 40px;">MAPS Acceleration Curve (coming soon). <br><br>
+        
+        Outside review of code and data for efficiency and accuracy. <br><br> 
+
+        Real-time refresh.<br><br>
+        
+        Machine-learning implementations:</p>
+        <p style="margin-left: 80px;">MACA-2: SMA proximity data.</p>
+        <p style="margin-left: 80px;">MACA weighted processing.</p></span>
+       
+    </div>
+    <p><span onclick="myFunction()" id="myBtn" style="cursor: pointer; font-size: 16px;text-decoration: underline;">Read more.</span></p>
+   </div>
+</div>
+<div class="w3-container" id="demo">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">DEMO</span></h5>
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>                <div id="5ddcb8a8-a7e9-4903-84a6-59989f882b16" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5ddcb8a8-a7e9-4903-84a6-59989f882b16")) {                    Plotly.newPlot(                        "5ddcb8a8-a7e9-4903-84a6-59989f882b16",                        [{"histfunc":"avg","legendrank":2,"marker":{"color":"#32a88b "},"name":"histogram_rb","x":["2017-08-14T00:00:00.000000","2017-08-21T00:00:00.000000","2017-08-28T00:00:00.000000","2017-09-04T00:00:00.000000","2017-09-11T00:00:00.000000","2017-09-18T00:00:00.000000","2017-09-25T00:00:00.000000","2017-10-02T00:00:00.000000","2017-10-09T00:00:00.000000","2017-10-16T00:00:00.000000","2017-10-23T00:00:00.000000","2017-10-30T00:00:00.000000","2017-11-06T00:00:00.000000","2017-11-13T00:00:00.000000","2017-11-20T00:00:00.000000","2017-11-27T00:00:00.000000","2017-12-04T00:00:00.000000","2017-12-11T00:00:00.000000","2017-12-18T00:00:00.000000","2017-12-25T00:00:00.000000","2018-01-01T00:00:00.000000","2018-01-08T00:00:00.000000","2018-01-15T00:00:00.000000","2018-01-22T00:00:00.000000","2018-01-29T00:00:00.000000","2018-02-05T00:00:00.000000","2018-02-12T00:00:00.000000","2018-02-19T00:00:00.000000","2018-02-26T00:00:00.000000","2018-03-05T00:00:00.000000","2018-03-12T00:00:00.000000","2018-03-19T00:00:00.000000","2018-03-26T00:00:00.000000","2018-04-02T00:00:00.000000","2018-04-09T00:00:00.000000","2018-04-16T00:00:00.000000","2018-04-23T00:00:00.000000","2018-04-30T00:00:00.000000","2018-05-07T00:00:00.000000","2018-05-14T00:00:00.000000","2018-05-21T00:00:00.000000","2018-05-28T00:00:00.000000","2018-06-04T00:00:00.000000","2018-06-11T00:00:00.000000","2018-06-18T00:00:00.000000","2018-06-25T00:00:00.000000","2018-07-02T00:00:00.000000","2018-07-09T00:00:00.000000","2018-07-16T00:00:00.000000","2018-07-23T00:00:00.000000","2018-07-30T00:00:00.000000","2018-08-06T00:00:00.000000","2018-08-13T00:00:00.000000","2018-08-20T00:00:00.000000","2018-08-27T00:00:00.000000","2018-09-03T00:00:00.000000","2018-09-10T00:00:00.000000","2018-09-17T00:00:00.000000","2018-09-24T00:00:00.000000","2018-10-01T00:00:00.000000","2018-10-08T00:00:00.000000","2018-10-15T00:00:00.000000","2018-10-22T00:00:00.000000","2018-10-29T00:00:00.000000","2018-11-05T00:00:00.000000","2018-11-12T00:00:00.000000","2018-11-19T00:00:00.000000","2018-11-26T00:00:00.000000","2018-12-03T00:00:00.000000","2018-12-10T00:00:00.000000","2018-12-17T00:00:00.000000","2018-12-24T00:00:00.000000","2018-12-31T00:00:00.000000","2019-01-07T00:00:00.000000","2019-01-14T00:00:00.000000","2019-01-21T00:00:00.000000","2019-01-28T00:00:00.000000","2019-02-04T00:00:00.000000","2019-02-11T00:00:00.000000","2019-02-18T00:00:00.000000","2019-02-25T00:00:00.000000","2019-03-04T00:00:00.000000","2019-03-11T00:00:00.000000","2019-03-18T00:00:00.000000","2019-03-25T00:00:00.000000","2019-04-01T00:00:00.000000","2019-04-08T00:00:00.000000","2019-04-15T00:00:00.000000","2019-04-22T00:00:00.000000","2019-04-29T00:00:00.000000","2019-05-06T00:00:00.000000","2019-05-13T00:00:00.000000","2019-05-20T00:00:00.000000","2019-05-27T00:00:00.000000","2019-06-03T00:00:00.000000","2019-06-10T00:00:00.000000","2019-06-17T00:00:00.000000","2019-06-24T00:00:00.000000","2019-07-01T00:00:00.000000","2019-07-08T00:00:00.000000","2019-07-15T00:00:00.000000","2019-07-22T00:00:00.000000","2019-07-29T00:00:00.000000","2019-08-05T00:00:00.000000","2019-08-12T00:00:00.000000","2019-08-19T00:00:00.000000","2019-08-26T00:00:00.000000","2019-09-02T00:00:00.000000","2019-09-09T00:00:00.000000","2019-09-16T00:00:00.000000","2019-09-23T00:00:00.000000","2019-09-30T00:00:00.000000","2019-10-07T00:00:00.000000","2019-10-14T00:00:00.000000","2019-10-21T00:00:00.000000","2019-10-28T00:00:00.000000","2019-11-04T00:00:00.000000","2019-11-11T00:00:00.000000","2019-11-18T00:00:00.000000","2019-11-25T00:00:00.000000","2019-12-02T00:00:00.000000","2019-12-09T00:00:00.000000","2019-12-16T00:00:00.000000","2019-12-23T00:00:00.000000","2019-12-30T00:00:00.000000","2020-01-06T00:00:00.000000","2020-01-13T00:00:00.000000","2020-01-20T00:00:00.000000","2020-01-27T00:00:00.000000","2020-02-03T00:00:00.000000","2020-02-10T00:00:00.000000","2020-02-17T00:00:00.000000","2020-02-24T00:00:00.000000","2020-03-02T00:00:00.000000","2020-03-09T00:00:00.000000","2020-03-16T00:00:00.000000","2020-03-23T00:00:00.000000","2020-03-30T00:00:00.000000","2020-04-06T00:00:00.000000","2020-04-13T00:00:00.000000","2020-04-20T00:00:00.000000","2020-04-27T00:00:00.000000","2020-05-04T00:00:00.000000","2020-05-11T00:00:00.000000","2020-05-18T00:00:00.000000","2020-05-25T00:00:00.000000","2020-06-01T00:00:00.000000","2020-06-08T00:00:00.000000","2020-06-15T00:00:00.000000","2020-06-22T00:00:00.000000","2020-06-29T00:00:00.000000","2020-07-06T00:00:00.000000","2020-07-13T00:00:00.000000","2020-07-20T00:00:00.000000","2020-07-27T00:00:00.000000","2020-08-03T00:00:00.000000","2020-08-10T00:00:00.000000","2020-08-17T00:00:00.000000","2020-08-24T00:00:00.000000","2020-08-31T00:00:00.000000","2020-09-07T00:00:00.000000","2020-09-14T00:00:00.000000","2020-09-21T00:00:00.000000","2020-09-28T00:00:00.000000","2020-10-05T00:00:00.000000","2020-10-12T00:00:00.000000","2020-10-19T00:00:00.000000","2020-10-26T00:00:00.000000","2020-11-02T00:00:00.000000","2020-11-09T00:00:00.000000","2020-11-16T00:00:00.000000","2020-11-23T00:00:00.000000","2020-11-30T00:00:00.000000","2020-12-07T00:00:00.000000","2020-12-14T00:00:00.000000","2020-12-21T00:00:00.000000","2020-12-28T00:00:00.000000","2021-01-04T00:00:00.000000","2021-01-11T00:00:00.000000","2021-01-18T00:00:00.000000","2021-01-25T00:00:00.000000","2021-02-01T00:00:00.000000","2021-02-08T00:00:00.000000","2021-02-15T00:00:00.000000","2021-02-22T00:00:00.000000","2021-03-01T00:00:00.000000","2021-03-08T00:00:00.000000","2021-03-15T00:00:00.000000","2021-03-22T00:00:00.000000","2021-03-29T00:00:00.000000","2021-04-05T00:00:00.000000","2021-04-12T00:00:00.000000","2021-04-19T00:00:00.000000","2021-04-26T00:00:00.000000","2021-05-03T00:00:00.000000","2021-05-10T00:00:00.000000","2021-05-17T00:00:00.000000","2021-05-24T00:00:00.000000","2021-05-31T00:00:00.000000","2021-06-07T00:00:00.000000","2021-06-14T00:00:00.000000","2021-06-21T00:00:00.000000","2021-06-28T00:00:00.000000","2021-07-05T00:00:00.000000","2021-07-12T00:00:00.000000","2021-07-19T00:00:00.000000","2021-07-26T00:00:00.000000","2021-08-02T00:00:00.000000","2021-08-09T00:00:00.000000","2021-08-16T00:00:00.000000","2021-08-23T00:00:00.000000","2021-08-30T00:00:00.000000","2021-09-06T00:00:00.000000","2021-09-13T00:00:00.000000","2021-09-20T00:00:00.000000","2021-09-27T00:00:00.000000","2021-10-04T00:00:00.000000","2021-10-11T00:00:00.000000","2021-10-18T00:00:00.000000","2021-10-25T00:00:00.000000","2021-11-01T00:00:00.000000","2021-11-08T00:00:00.000000","2021-11-15T00:00:00.000000","2021-11-22T00:00:00.000000","2021-11-29T00:00:00.000000","2021-12-06T00:00:00.000000","2021-12-13T00:00:00.000000","2021-12-20T00:00:00.000000","2021-12-27T00:00:00.000000","2022-01-03T00:00:00.000000","2022-01-10T00:00:00.000000","2022-01-17T00:00:00.000000","2022-01-24T00:00:00.000000","2022-01-31T00:00:00.000000","2022-02-07T00:00:00.000000","2022-02-14T00:00:00.000000","2022-02-21T00:00:00.000000","2022-02-28T00:00:00.000000","2022-03-07T00:00:00.000000","2022-03-14T00:00:00.000000","2022-03-21T00:00:00.000000","2022-03-28T00:00:00.000000","2022-04-04T00:00:00.000000","2022-04-11T00:00:00.000000","2022-04-18T00:00:00.000000","2022-04-25T00:00:00.000000","2022-05-02T00:00:00.000000","2022-05-09T00:00:00.000000","2022-05-16T00:00:00.000000","2022-05-23T00:00:00.000000","2022-05-30T00:00:00.000000","2022-06-06T00:00:00.000000","2022-06-13T00:00:00.000000","2022-06-20T00:00:00.000000","2022-06-27T00:00:00.000000","2022-07-04T00:00:00.000000","2022-07-11T00:00:00.000000","2022-07-18T00:00:00.000000","2022-07-25T00:00:00.000000","2022-08-01T00:00:00.000000","2022-08-08T00:00:00.000000","2022-08-15T00:00:00.000000","2022-08-22T00:00:00.000000","2022-08-29T00:00:00.000000","2022-09-05T00:00:00.000000"],"xbins":{"end":1662868800000,"size":604800000,"start":1502683200000},"y":[-0.34,2.69,1.62,-0.06,-4.86,-5.59,-1.52,-0.29,3.06,11.44,19.83,45.5,31.14,38.89,57.52,112.39,146.9,143.93,104.65,86.4,84.03,66.87,50.41,39.18,25.61,19.79,18.91,19.4,20.93,15.49,11.58,8.16,6.6,2.15,-2.83,-5.49,-6.59,-7.34,-9.96,-13.02,-14.02,-16.38,-18.63,-20.18,-21.98,-22.29,-22.09,-22.76,-17.18,-11.3,-10.46,-11.48,-11.98,-12.13,-11.38,-11.0,-10.23,-9.49,-8.51,-7.93,-7.66,-7.7,-7.97,-7.78,-7.14,-5.95,-4.95,-7.58,-7.01,-15.54,-28.68,-35.7,-36.03,-35.55,-36.26,-35.79,-35.22,-34.28,-31.76,-29.02,-27.21,-25.47,-23.52,-21.19,-18.19,-13.22,-9.3,-7.13,-4.46,-3.32,-3.86,2.83,14.51,29.34,58.03,68.9,71.16,121.58,104.6,97.11,77.56,65.32,58.45,58.85,53.24,47.08,39.91,35.83,31.56,27.32,19.44,14.48,10.1,6.42,2.06,2.51,1.64,-0.76,-3.16,-6.13,-9.62,-11.71,-13.23,-16.92,-19.67,-17.5,-12.09,-9.59,-6.59,-6.39,-5.61,-3.05,-0.74,-0.74,-1.52,-2.64,-3.39,-4.28,-3.91,-4.14,-4.79,-2.59,-1.49,-0.3,1.25,3.26,4.19,5.78,6.69,7.75,6.0,6.13,5.67,6.01,6.47,5.34,6.8,7.92,16.2,20.37,16.26,17.5,17.17,15.99,13.73,13.44,12.73,12.52,12.77,13.67,27.74,62.9,59.61,58.59,54.83,85.61,108.67,145.16,149.31,126.03,101.36,95.01,93.8,96.4,132.25,117.02,110.08,112.61,104.64,94.24,88.61,80.87,71.79,59.16,54.02,47.65,33.01,23.49,17.45,12.44,6.67,4.07,2.65,-1.59,-4.32,-4.12,-14.94,-13.82,-10.4,-8.26,-8.18,-7.12,-5.62,-2.88,-2.83,-4.13,-2.15,0.65,0.05,4.29,11.5,16.63,20.64,26.58,25.99,20.18,13.69,10.25,8.55,6.55,6.86,4.97,4.55,1.75,-4.63,-5.71,-8.11,-10.47,-11.38,-12.06,-13.82,-12.31,-9.76,-10.62,-12.12,-12.96,-12.74,-12.26,-12.32,-15.41,-19.04,-21.34,-21.13,-12.48,-29.17,-40.02,-43.37,-42.39,-38.47,-35.18,-32.66,-30.2,-29.7,-29.91,-29.79],"type":"histogram"}],                        {"bargap":0.01,"barmode":"overlay","showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#f2f5fa"},"error_y":{"color":"#f2f5fa"},"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"baxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"line":{"color":"#283442"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"marker":{"line":{"color":"#283442"}},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#506784"},"line":{"color":"rgb(17,17,17)"}},"header":{"fill":{"color":"#2a3f5f"},"line":{"color":"rgb(17,17,17)"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#f2f5fa","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#f2f5fa"},"geo":{"bgcolor":"rgb(17,17,17)","lakecolor":"rgb(17,17,17)","landcolor":"rgb(17,17,17)","showlakes":true,"showland":true,"subunitcolor":"#506784"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"dark"},"paper_bgcolor":"rgb(17,17,17)","plot_bgcolor":"rgb(17,17,17)","polar":{"angularaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","radialaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"yaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"},"zaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","gridwidth":2,"linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3"}},"shapedefaults":{"line":{"color":"#f2f5fa"}},"sliderdefaults":{"bgcolor":"#C8D4E3","bordercolor":"rgb(17,17,17)","borderwidth":1,"tickwidth":0},"ternary":{"aaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"baxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"bgcolor":"rgb(17,17,17)","caxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"title":{"x":0.05},"updatemenudefaults":{"bgcolor":"#506784","borderwidth":0},"xaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","zerolinewidth":2}}},"title":{"text":"Binance BTCUSD: Moving Average Points System (MAPS)"},"xaxis":{"title":{"text":"Datetime"}},"yaxis":{"ticksuffix":"%","title":{"text":"MAPS in %"}}},                        {"responsive": true}                    )                };                            </script>        
+		</div>
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+</div>
+</div>
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ASSETS</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Available</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Requested</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5><a href="./binance-btcusd.html" target="_blank">Binance: BTCUSD</a></h5>
+      <p class="w3-text-grey">Bitcoin-USD pair from Binance cryptocurrency exchange.</p><br>
+    </div>
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>NYSE: SPX</h5>
+      <p class="w3-text-grey">Standard & Poor's 500 Index.</p><br>
+    <!-- <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;"> -->
+     </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="contact" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT</span></h5>
+    <p><strong>Request</strong> an asset.</p>
+    <p><strong>Business</strong> inquiries.</p>
+    <form action="https://formspree.io/f/xgeqvbgl"  method="post">
+      <input type="hidden" name="_subject" value="Form submission from bajayaja.github.io." />
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Asset Request" required name="Asset Request"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Contact Email" required name="Reply To"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Inqueries" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+
+
+// <!-- Read more/less button -->
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var evenMore = document.getElementById("evenmore");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more...";
+    moreText.style.display = "none";
+    evenMore.style.display = "none";
+  } 
+  else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less.";
+    moreText.style.display = "inline";
+    evenMore.style.display = "inline";
+  }
+}
+</script>
+
+</body>
+</html>
+
+<!-- social media buttons https://freefrontend.com/css-buttons/ && https://codepen.io/abdelrhmansaid/pen/OJRNOpQ-->
