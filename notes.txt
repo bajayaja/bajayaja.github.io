@@ -1,0 +1,15 @@
+I am close to completing the demo.
+
+The next things to do:
+    done -- 1. Add correct background
+    done -- 2. Remove gap under photos -- from "td a" tag
+    3. Create gallery (including adjustments to close button div)
+        to do: figure out why lightbox is openning automatically;
+        i might consider starting from scratch using a combination
+        of vscode and chatgpt. should be a lot quicker.
+        
+        the plan: call existing code into a div, use js to create lightbox
+        without modifying existing code. 
+    
+    4. for mobile create a section where you can scroll through the thumbnails
+    5. all written portions should be on top
