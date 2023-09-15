@@ -13,3 +13,59 @@ The next things to do:
     
     4. for mobile create a section where you can scroll through the thumbnails
     5. all written portions should be on top
+
+Marianne liked the design -- next
+    1. in mobile view put a title pitcture
+    2. create a lightbox gallery
+        a. maintain the photo scroll bar
+        b. have arrows to scroll left and right as well
+        c. opens as lightbox
+        question: should mobile version cover
+        entire screen or just a portion
+
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethangle1.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethcloser.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethhalf1.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethback.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethfull.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethhalf2.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethangle2.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethbodyback.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethbodyfront.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethclose.jpeg"
+onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethclosenohat.jpeg"
+
+<tr class="table-row">
+          <td class="image-cell">
+              <img class="style12" onclick="openModal();currentSlide(1)" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethangle1.jpeg" xthumbnail-orig-image="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethangle1.jpeg" alt="Jumeau Doll">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethcloser.jpeg" xthumbnail-orig-image="merchandiseimages/sy jumeauelizabethcloser.jpeg" alt="Jumeau Doll">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethhalf1.jpeg" alt="Jumeau Elizabeth Half 1">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethback.jpeg" alt="Jumeau Elizabeth Back">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethfull.jpeg" alt="Jumeau Elizabeth Full">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethhalf2.jpeg" alt="Jumeau Elizabeth Half 2">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethangle2.jpeg" xthumbnail-orig-image="merchandiseimages/sy jumeauelizabethangle2.jpeg" alt="Jumeau Doll">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethbodyback.jpeg" alt="Jumeau Elizabeth Body Back">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethbodyfront.jpeg" alt="Jumeau Elizabeth Body Front">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethclose.jpeg" alt="Jumeau Elizabeth Body Back">
+          </td>
+          <td class="image-cell">
+              <img class="style12" src="merchandiseimages/dollone/fullsize/sy%20jumeauelizabethclosenohat.jpeg" alt="Jumeau Elizabeth Body Front">
+          </td> 
